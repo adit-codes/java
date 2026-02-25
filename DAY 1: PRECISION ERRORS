@@ -1,0 +1,21 @@
+//CONCEPT: DOUBLE AND FLOAT HAVE HIGHER MEMORY
+//BUT ADVISABLE NOT TO USE THEM AS THEY DON'T STORE DATA PRECISELY- PRECISION ERRORS
+
+//EXAMPLE 
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    double a = 100000;
+    double b = 100000;
+    double c = a * b;
+    c = 1e24;
+    cout << fixed << c << endl;
+}
+
+//OUTPUT 
+999999999999999983222784.000000
+
+//NOTE
+These errors occur because computers use the 
+IEEE 754 standard to store decimal numbers in binary (base-2),
